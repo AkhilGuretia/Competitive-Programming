@@ -1,5 +1,6 @@
 ll a[MAX];
 ll siz[MAX];
+//initialise
 void st(ll n)
 {
   for(ll i=0;i<=n;i++)
@@ -8,6 +9,7 @@ void st(ll n)
     siz[i]=1;
   }
 }
+//find root
 int root(ll r)
 {
     if(a[r]==r) 
@@ -15,6 +17,8 @@ int root(ll r)
     else 
       return a[r]=root(a[r]);
 }
+//do union
+
 void unionn(ll u,ll v)
 {
     u=root(u);
