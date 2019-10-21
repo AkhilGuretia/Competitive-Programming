@@ -1,5 +1,5 @@
 ll seg[500005],v[500005];
-
+//build function
 void build(ll idx,ll s,ll e)
 {
     if(s==e)
@@ -12,7 +12,7 @@ void build(ll idx,ll s,ll e)
       seg[idx]=seg[2*idx+1]+seg[2*idx+2];
     }
 }
-
+//modify function
 void modify(ll idx,ll x,ll val,ll s,ll e)
 {
   if(s>e or x>e or x<s)
@@ -27,7 +27,7 @@ void modify(ll idx,ll x,ll val,ll s,ll e)
     seg[idx]=seg[2*idx+1]+seg[2*idx+2];
   }
 }
-
+//query function
 ll query(ll idx,ll s,ll e,ll x,ll y)
 {
   if(s>y or e<x)
