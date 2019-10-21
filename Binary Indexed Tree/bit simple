@@ -1,7 +1,7 @@
 
 #define MAX 500005
 ll bit[MAX];
-
+//query
 ll query(int idx)
 {
     ll sum = 0;
@@ -11,7 +11,7 @@ ll query(int idx)
     }
     return sum;
 }
-
+//update function
 void update(ll idx,ll x){
    while (idx < MAX) {
         bit[idx] += x;
